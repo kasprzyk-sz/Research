@@ -5,84 +5,198 @@ layout: layouts/base.njk
 templateEngineOverride: njk, md
 ---
 
-{% render '@vf-intro', {"vf_intro_phase": "alpha", "vf_intro_heading": siteConfig.siteInformation.title,
-  "vf_intro_lede": siteConfig.siteInformation.short_description,
-  "vf_intro_text": [
-    "☝️ that also means dynamic building of just the CSS and JS you need."
-  ]
-} %}
 
-<section class="embl-grid embl-grid--has-centered-content">
+<section class="vf-intro | embl-grid embl-grid--has-centered-content">
   <div>
     <!-- empty -->
   </div>
-  <div class="vf-content">
-  {% markdown %}
-
-  ## Quickstart
-
-  ```
-
-      yarn create @visual-framework/vf-eleventy your-new-site-name embl-eleventy   
-
-  ```
-
-  This will install a new [`embl-eleventy`](https://github.com/embl-communications/embl-eleventy/) to a folder named `your-new-site-name`.
-
-  Then follow the onscreen prompts and links below to develop and configure.
-
-  ## Longer install?
-
-  The above too easy or have questions? [Read this guide](https://github.com/visual-framework/vf-eleventy#1-creating-a-new-project-powered-by-vf-eleventy).
-
-  {% endmarkdown %}
-
+  <div>
+    <h1 class="vf-intro__heading vf-intro__heading--has-tag">Research <a href="JavaScript:Void(0);"
+        class="vf-badge vf-badge--primary vf-badge--phases">beta</a></h1>
+    <p class="vf-lede">From genomes to ecosystems, EMBL is studying the mysteries of life</p>
+    <p class="vf-intro__text">At EMBL, researchers are discovering the secrets of life.</p>
+    <p class="vf-intro__text">From genomics to planetary biology, EMBL’s diverse research programme caters for a wide range of research questions.</p>
+    <p class="vf-intro__text">The best scientific talent from around the world, collaborating to generate key insights into the inner workings of biological systems.</p>
   </div>
 </section>
-
-
-<section class="vf-intro | embl-grid embl-grid--has-centered-content">
-
+<hr class="vf-divider">
+<section class="vf-grid | vf-content | vf-u-margin__bottom--xxl">
 <div>
-  <!-- empty -->
+<h3>Learn more about EMBL research </h3>
 </div>
-<div class="vf-content">
-
-## What you get
-
-- the Eleventy static site generator
-- access to the Visual Framework component system
-
-### Component installation
-
-To add a component you can use npm/Yarn or install it manually.
-
-In either case you'll need to re-run `gulp dev` to ensure the component is fully loaded.
-
-- installation: `yarn add @visual-framework/embl-logo`
-- updating: `yarn upgrade-interactive --latest`
-
-### Manual installation for customisation
-
-1. Download a pattern
-2. Copy it to `./src/components/vf-component-name`
-
-### Add your own local component
-
-You can add a custom VF-compatible component to `./src/components` and use it in
-your site.
-
-- `gulp vf-component`
-
-You'll find a `vf-sample` component there, we've used it below:
-
-<div class="vf-box">
-{% verbatim %}
-Code: {% render "@vf-sample", {text: "with some text"} %}
-{% endverbatim %}
-
-Returns: {% render "@vf-sample", {text: "with some text"} %}
+<div>
+<a href="#" class="vf-link"><h3>EMBL Research Programme</h3></a>
+<p>Find out which topics of research EMBL will focus on for the next five years</p>
+</div>
+<div>
+<a href="#" class="vf-link"><h3>EMBL Technologies</h3></a>
+<p>State-of-the-art technologies support research into a range of biological topics </p>
+</div>
+<div>
+<a href="#" class="vf-link"><h3>A history of EMBL research</h3></a>
+<p>How EMBL’s research programme has evolved over the years</p>
 </div>
 
+</section>
+<hr class="vf-divider">
+<h1 class="vf-text vf-text-heading--3">Research topics </h1>
+
+<style>
+.vf-card {
+  grid-template-rows: 216px repeat(2, 36px);
+}
+</style>
+
+<section class="vf-grid | vf-grid__col-3 | vf-u-margin__bottom--xxl | vf-u-margin__top--xxl">
+  <div class="vf-card vf-card--topic">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRr6U6wf1VFnmoktsl_qIFUdHzR_bNS4nrS1wbFcfaDaGkpEVsv" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Cell biology and biophysics
+      </h3>
+    </div>
+  </div>
+  <div class="vf-card vf-card--topic">
+    <img src="https://news.harvard.edu/wp-content/uploads/2019/05/Cell_cluster_before_and_after_enrichment_c_Melton_lab_Harvard_University1.jpg?w=1200&h=800&crop=1" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Developmental biology
+      </h3>
+    </div>
+  </div>
+ <div class="vf-card vf-card--topic">
+    <img src="https://static.kent.ac.uk/nexus/ems/519.jpg" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Directors' research
+      </h3>
+    </div>
+  </div>
+</section>
+<section class="vf-grid | vf-grid__col-3 | vf-u-margin__bottom--xxl | vf-u-margin__top--xxl">
+ 
+  <div class="vf-card vf-card--topic">
+    <img src="https://www.medicalnewstoday.com/content/images/articles/326/326066/image-of-embryonic-stem-cell.jpg" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Genome biology
+      </h3>
+    </div>
+  </div>
+  <div class="vf-card vf-card--topic">
+    <img src="https://media.nature.com/lw800/magazine-assets/d41586-019-02654-w/d41586-019-02654-w_17151368.jpg" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Structural and computational biology
+      </h3>
+    </div>
+  </div>
+  <div class="vf-card vf-card--topic">
+    <img src="https://promega.media/-/media/images/applications/3d-cell-culture/5-high-throughput-drug-screening-using-3d-cell-cultures.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Interdisciplinary research
+      </h3>
+    </div>
+  </div>
+</section>
+<section class="vf-grid | vf-grid__col-3 | vf-u-margin__bottom--xxl | vf-u-margin__top--xxl">
+  <div class="vf-card vf-card--topic">
+    <img src="https://inteng-storage.s3.amazonaws.com/img/iea/jg6P9yEywx/sizes/prokaryote-eukaryote-cells_resize_md.jpg" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Bioinformatics
+      </h3>
+    </div>
+  </div>
+  <div class="vf-card vf-card--topic">
+    <img src="https://cdn-images-1.medium.com/max/2000/1*sC78Ol377El5QTQxrndcVQ.jpeg" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Chemistry
+      </h3>
+    </div>
+  </div>
+    <div class="vf-card vf-card--topic">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0wOA_yLP6qOOjEl9jzsq1ktZoTKtdZn2_FuaI-1_r6b3x0wIg" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Physics and engineering
+      </h3>
+    </div>
+  </div>
+</section>
+<section class="vf-grid | vf-grid__col-3 | vf-u-margin__bottom--xxl | vf-u-margin__top--xxl">
+  <div class="vf-card vf-card--topic">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRUbCi73gVNbUG2WFitp-LbeLLyfdKax0bPQua2PHrZkiBq_T_5" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Mathematics and statistics
+      </h3>
+    </div>
+  </div>
+  <div class="vf-card vf-card--topic">
+    <img src="http://www.wits.ac.za/media/wits-university/course-finder-images/cell-biology.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+      <h3 class="vf-card__title">
+        Interdisciplinary centres
+      </h3>
+    </div>
+  </div>
+</section>
+<hr class="vf-divider">
+<section class="embl-grid embl-grid--has-centered-content">
+  <div>
+    <h1 class="vf-text vf-text-heading--3">Upcoming seminars</h1>
+  </div>
+  <div class="vf-links">
+    <ul class="vf-links__list | vf-list">
+        <li class="vf-list__item">
+         <p class="vf-links__meta">14th February 2018</p>
+            <a class="vf-list__link" href="JavaScript:Void(0);">
+        Convergent cell fate specification and pattern evolution in the vertebrate skeleton
+      </a>
+      <p class="vf-links__meta">Patrick Tschopp, University of Basel 14:00 - Room 202</p>
+        </li>
+        <hr class="vf-divider">
+        <li class="vf-list__item">
+         <p class="vf-links__meta">16th February 2018</p>
+            <a class="vf-list__link" href="JavaScript:Void(0);">
+        Molecular mechanisms and evolution of animal-algal symbiosis
+      </a>
+      <p class="vf-links__meta">Patrick Tschopp, University of Basel 14:00 - Room 202</p>
+        </li>
+        <hr class="vf-divider">
+        <li class="vf-list__item">
+         <p class="vf-links__meta">19th February 2018</p>
+            <a class="vf-list__link" href="JavaScript:Void(0);">
+        Chromatin topology in development and transcriptional regulation
+      </a>
+      <p class="vf-links__meta">Patrick Tschopp, University of Basel 14:00 - Room 202</p>
+        </li>
+    </ul>
 </div>
+</section>
+<hr class="vf-divider">
+<section class="embl-grid embl-grid--has-centered-content">
+  <div>
+    <h1 class="vf-text vf-text-heading--3">News</h1>
+  </div>
+  <div>
+    <link rel="import"
+      href="https://dev.content.embl.org/api/v1/pattern.html?filter-content-type=article&filter-field-value%5Bfield_article_type%5D=article_timely&filter-fields-exists=field_display_title%2Cfield_teaser%2Cfield_canonical_location&limit=5&pattern=vf-news-item-default&sort-field-value%5Bcreated%5D=DESC"
+      data-target="self" data-embl-js-content-hub-loader>
+    <a id="harsh" href="#" class="vf-link ">See all EMBL news</a>
+  </div>
+</section>
+<hr class="vf-divider">
+<section class="embl-grid embl-grid--has-centered-content">
+  <div>
+    <h1 class="vf-text vf-text-heading--3">Research jobs</h1>
+  </div>
+  <div>
+    <link rel="import"
+      href="https://dev.content.embl.org/api/v1/pattern.html?pattern=vf-jobs-snippet&filter-content-type=jobs&filter-field-contains[field_jobs_description]=Cancer&filter-field-date-after[field_jobs_expiration]=today&limit=3"
+      data-target="self" data-embl-js-content-hub-loader>
+  </div>
 </section>
